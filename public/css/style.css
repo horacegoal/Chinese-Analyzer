@@ -3,6 +3,7 @@
   left: 50%;
   bottom: 0;
   transform: translate(-50%);
+  margin-bottom: 10px;
 }
 
 #word_cloud{
@@ -26,7 +27,7 @@
 
 @media only screen and (max-width: 500px){
   .lowerside{
-    width: 100%;
+    width: 90%;
   }
   #text_input{
     width: 100%;
