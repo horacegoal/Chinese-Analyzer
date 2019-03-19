@@ -1,0 +1,29 @@
+// speech = new p5.Speech();
+// speech.onLoad = function(){
+//   console.log(speech.voices)
+// };
+
+// canvas.mousePressed(speak);
+// let voiceURL = 'Sin-ji'
+// function speak() {
+//   speech.setVoice(voiceURL)
+//   speech.setPitch(2)
+  // speech.setVolume(0.1)
+  // speech.speak('')
+  // 
+
+
+// }
+// let lang = 'en-US';
+// let rec = new p5.SpeechRec()
+//
+// let continous = true;
+// let interim = true;
+// rec.onResult = gotSpeech;
+// rec.continuous = true;
+// rec.interimResults = true;
+// rec.start()
+//
+// function gotSpeech() {
+//   createP(rec.resultString)
+// }

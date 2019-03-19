@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div id="word_cloud"></div>
+      <div class="lowerside">
+
+          <div id="sentiment_analysis">情感傾向：<span id="score"></span>可信度：<span id="score_confidence"></span>% <button id="submit">提交</button></div>
+          <textarea id="text_input" rows="8" cols="80"></textarea>
+
+      </div>
+  </div>
+
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="./js/libs/d3.js"></script>
+  <script type="text/javascript" src="./js/libs/d3.layout.cloud.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  <script type="text/javascript" src="./js/libs/p5.speech.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>

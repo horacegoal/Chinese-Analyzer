@@ -1,0 +1,36 @@
+.lowerside{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+}
+
+#word_cloud{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#submit{
+  float: right;
+  width: 100px;
+}
+
+#score{
+  margin-right: 30px;
+}
+
+.container{
+  width: 100%;
+}
+
+@media only screen and (max-width: 500px){
+  .lowerside{
+    width: 100%;
+  }
+  #text_input{
+    width: 100%;
+    /* margin: 10px; */
+  }
+
+}
