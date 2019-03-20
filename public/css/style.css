@@ -11,11 +11,17 @@
   left: 50%;
   transform: translate(-50%);
 }
+#recorder{
+  float: right;
+  /* color: red; */
+}
 
 #submit{
   float: right;
   width: 100px;
 }
+
+
 
 #score{
   margin-right: 30px;

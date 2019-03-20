@@ -25,7 +25,6 @@ server.listen(port, () => {
 io.on('connection', (socket) => {
   console.log('client connected')
     socket.on('text', (textInput) => {
-
       client.sentimentClassify(textInput).then(function(result) {
       // console.log(JSON.stringify(result, null, 2));
       let sentimentResult = {

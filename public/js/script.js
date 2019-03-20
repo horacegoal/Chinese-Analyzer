@@ -6,6 +6,8 @@ socket.on('connect', function(){
 
 
 socket.on('wordsList', function(tokens){
+  let cloudArea = document.getElementById("word_cloud")
+  cloudArea.innerHTML = '';
   let counts = {};
   let keys = [];
   // console.log(tokens)
@@ -26,7 +28,6 @@ socket.on('wordsList', function(tokens){
   // for(let i = 0; i < keys.length; i++){
   //   console.log(`${keys[i]} ${counts[keys[i]]}`)
   // }
-
 
   var fill = d3.scale.category20();
   let wordScale = d3.scale.linear().range([15,60]);
@@ -84,7 +85,6 @@ let submitButton = document.getElementById("submit")
 submitButton.onclick = function(){
   let textInput = document.getElementById("text_input").value;
   let cloudArea = document.getElementById("word_cloud")
-  cloudArea.innerHTML = ''
   socket.emit('text', textInput);
 }
 
@@ -106,3 +106,27 @@ socket.on('sentimentClassify', function (res) {
   let scoreConfidence = document.getElementById("score_confidence");
   scoreConfidence.innerHTML = confidence;
 })
+
+let rec = new p5.SpeechRec()
+
+rec.onResult = gotSpeech;
+rec.onError = printError;
+rec.continuous = true;
+// rec.interimResults = true;
+
+function gotSpeech() {
+  socket.emit('text', rec.resultString);
+  recorder.style.color = "black";
+
+  console.log(rec.resultString);
+}
+
+function printError(){
+  console.log(rec);
+}
+
+let recorder = document.getElementById("recorder");
+recorder.onclick = function(){
+  recorder.style.color = "red";
+  rec.start()
+}
